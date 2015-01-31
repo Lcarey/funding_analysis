@@ -8,3 +8,4 @@ http://exporter.nih.gov/ExPORTER_Catalog.aspx?sid=1&index=0
 abstracts are here:
 http://exporter.nih.gov/ExPORTER_Catalog.aspx?sid=0&index=1
 
+![sample_figure](sample.png)
