@@ -9,3 +9,12 @@ abstracts are here:
 http://exporter.nih.gov/ExPORTER_Catalog.aspx?sid=0&index=1
 
 ![sample_figure](sample.png)
+
+
+# to download NIH RePORTER
+#   http://exporter.nih.gov/ExPORTER_Catalog.aspx?sid=0&index=1
+download:
+	wget http://exporter.nih.gov/CSVs/final/RePORTER_PRJ_C_FY2014.zip
+	wget http://exporter.nih.gov/CSVs/final/RePORTER_PRJABS_C_FY2014.zip
+	wget http://exporter.nih.gov/CSVs/final/RePORTER_PRJ_C_FY2013.zip
+	wget http://exporter.nih.gov/CSVs/final/RePORTER_PRJABS_C_FY2013.zip
