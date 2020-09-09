@@ -35,3 +35,8 @@ dl_data:
 	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJ_C_FY2006.zip
 	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJ_C_FY2005.zip
 	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJ_C_FY2004.zip
+
+unzip:
+	parallel unzip -f :::  *.zip
+	parallel dos2unix :::  *.csv
+
