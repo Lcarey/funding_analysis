@@ -3,6 +3,7 @@ from stop_words import get_stop_words
 
 import bz2, pickle
 import _pickle as cPickle
+
 # save and load compressed pickle files
 def decompress_pickle(filename):
     if os.path.isfile(filename):
@@ -18,14 +19,6 @@ def decompress_pickle(filename):
 def compressed_pickle(filename, data):
     with bz2.BZ2File(filename + '.pbz2','w') as f: 
         cPickle.dump(data, f)
-
-
-# grants_abs_list is a list of sets. each set contains all the words in one grant abstract
-#   identify the sets in which the word appears
-#   and return the #, avg, and total # of grants (# of sets)
-def CountGrantsInOneYearWithWord( grants_abs_list , word):
-    binary_vect = [word in words for words in grants_abs_list]
-    return( sum(binary_vect), sum(binary_vect)/len(binary_vect)*100, len(binary_vect) )
 
 
 # load an abstracts CSV file and return a set of unique, no-stop & no-punctuation words
@@ -45,11 +38,10 @@ def ProcessesWordsInAbstractFile(abstract_csv_file,year):
     compressed_pickle(abstract_csv_file.replace('.csv',''), (year,abstract_text))
     return( abstract_text )
 
-def TestProcess(arg1,arg2):
-    #return(arg1)
-    print('Running TestProcess: ', arg1, arg2)
-    print('current_process: ', multiprocessing.current_process())
-    print('parent_process: ', multiprocessing.parent_process())
-    return(arg1)
 
-
+# grants_abs_list is a list of sets. each set contains all the words in one grant abstract
+#   identify the sets in which the word appears
+#   and return the #, avg, and total # of grants (# of sets)
+def CountGrantsInOneYearWithWord( grants_abs_list , word):
+    binary_vect = [word in words for words in grants_abs_list]
+    return( sum(binary_vect), sum(binary_vect)/len(binary_vect)*100, len(binary_vect) )
