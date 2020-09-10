@@ -19,6 +19,8 @@ dl_abs:
 	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJABS_C_FY2004.zip &
 	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJABS_C_FY2003.zip
 	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJABS_C_FY2002.zip
+	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJABS_C_FY2001.zip
+	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJABS_C_FY2000.zip
 
 dl_data:
 	$W https://exporter.nih.gov/CSVs/final/RePORTER_PRJ_C_FY2019.zip
