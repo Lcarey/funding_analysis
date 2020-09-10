@@ -12,7 +12,7 @@ def decompress_pickle(filename):
         data = bz2.BZ2File(filename + '.pbz2'  , 'rb')
     else:
         print('cannot find ', filename)
-        raise TypeError("Only integers are allowed")
+        raise TypeError( f'cannot find the pickle file: {filename}' )
     data = cPickle.load(data)
     return data
 
